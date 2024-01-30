@@ -16,7 +16,13 @@ import User from "./models/User.js";
 import Product from './models/Product.js';
 import ProductStat from './models/ProductStat.js';
 import Transaction from './models/Transaction.js';
-import { dataUser, dataProduct, dataProductStat, dataTransaction } from "./data/index.js";
+import OverallStat from './models/OverallStat.js';
+import { dataUser, 
+    dataProduct, 
+    dataProductStat, 
+    dataTransaction,
+    dataOverallStat, //2021 is only put to make it comprehensive, modify
+} from "./data/index.js";
 
 
 
@@ -52,7 +58,7 @@ mongoose.connect(process.env.MONGO_URL, {
         //Product.insertMany(dataProduct);
         //ProductStat.insertMany(dataProductStat);
         //Transaction.insertMany(dataTransaction);
+        //OverallStat.insertMany(dataOverallStat);
         
-
     })
     .catch((error) => console.error(`Error connecting to MongoDB: ${error.message}`));
