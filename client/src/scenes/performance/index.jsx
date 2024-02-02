@@ -1,14 +1,16 @@
 import React from 'react';
 import { Box, useTheme } from '@mui/material';
-import { useGetAdminsQuery } from 'state/api';
+import { useGetUserPerformanceQuery } from 'state/api';
+import {  useSelector } from 'react-redux';
 import { DataGrid } from "@mui/x-data-grid";
 import Header from 'components/Header';
 import CustomColumnMenu from "components/DataGridCustomColumnMenu"
 
-const Admin = () => {
+const Performance = () => {
     const theme = useTheme();
-    const { data, isLoading } = useGetAdminsQuery();
-    //console.log("data", data);
+    const userId = useSelector((state) => state.global.userId)
+    const { data, isLoading } = useGetUserPerformanceQuery(userId);
+    //console.log('data', data);
     
     const columns = [
       {
@@ -17,43 +19,33 @@ const Admin = () => {
         flex: 1,
       },
       {
-        field: "name",
-        headerName: "NAME",
+        field: "userId",
+        headerName: "User ID",
         flex: 0.5,
       },
       {
-        field: "email",
-        headerName: "EMAIL",
+        field: "createdAt",
+        headerName: "CreatedAt",
         Flex: 1,
       },
       {
-        field: "phoneNumber",
-        headerName: "Phone Number",
+        field: "products",
+        headerName: "# of Products",
+        Flex: 0.5,
+        sortable: false,
+        renderCell: (params) => params.value.length
+      },
+      {
+        field: "cost",
+        headerName: "Cost",
         flex: 1,
-        renderCell: (params) => {
-          return params.value.replace(/^(\d{3})(\d{3})(\d{4})/, "($1)$2-$3")
-        },
-      },
-      {
-        field: "country",
-        headerName: "COUNTRY",
-        flex: 0.4,
-      },
-      {
-        field: "occupation",
-        headerName: "OCCUPATION",
-        flex: 1,
-      },
-      {
-        field: "role",
-        headerName: "ROLE",
-        flex: 0.5,
+        renderCell: (params) => `$${Number(params.value).toFixed(2)}`,
       },
     ];
 
   return (
     <Box m="1.5rem 2.5rem">
-    <Header title="Administration" subtitle="Management and list of Administrators" />
+    <Header title="PERFROMANCE" subtitle="Affiliate Sales Perfromance tracking" />
     <Box
       mt="40px"
       height="75vh"
@@ -85,7 +77,7 @@ const Admin = () => {
         <DataGrid 
           loading={isLoading || !data}
           getRowId={(row)=> row._id}
-          rows = {data || []}
+          rows = {(data && data.sales) || []}
           columns={columns}
           components={{
             ColumnMenu: CustomColumnMenu,
@@ -95,4 +87,4 @@ const Admin = () => {
 </Box>
   );
 };
-export default Admin;
+export default Performance;
