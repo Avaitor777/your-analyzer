@@ -24,7 +24,7 @@ import {
     PointOfSaleOutlined,
     TodayOutlined,
     CalendarMonthOutlined,
-    AdminPanelSettingsOutlined,
+    //AdminPanelSettingsOutlined,
     TrendingUpOutlined,
     PieChartOutlined,
 } from "@mui/icons-material";
@@ -82,10 +82,10 @@ const navItems = [
         text: "Management",
         icon: null
     },
-    {
-        text: "Admin",
-        icon: <AdminPanelSettingsOutlined />
-    },
+    // {
+    //     text: "Admin",
+    //     icon: <AdminPanelSettingsOutlined />
+    // },
     {
         text: "Performance",
         icon: <TrendingUpOutlined />

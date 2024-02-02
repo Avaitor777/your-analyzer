@@ -39,3 +39,25 @@ There are 2 major folders
  4. if any doubts as such, refer package.json of server
 
  make sure to "cd" to the folders before start.
+
+Files and website to visit for code extraction:
+
+   - Certain particular codes have been fully      imported or used from sources/packages thats MIT licensed. Do REFER them to make design or structural changes to the component.
+
+      1. https://reactdatepicker.com
+      2. https://mui.com/material-ui/react-drawer/#persistent-drawer
+      3. https://nivo.rocks/line/
+      4. https://nivo.rocks/choropleth/
+      5. https://nivo.rocks/pie/
+      6. https://reactdatepicker.com/#example-date-range
+
+error fox required:
+   from @mui/x-data-grid:
+      - some packages are unable or not recognized by the react compiler.
+      - try updating npm or try for a fix into the packages
+      - the imports are 
+         1. GridFilterMenuItem
+         2. HideGridColMenuItem
+      - I have tried replacing them but on replacement, the parameters also changes. research required.
+      - component active at http://localhost:3000/admin
+      - related tag calls and components are disabled for the time being.

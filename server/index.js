@@ -17,11 +17,13 @@ import Product from './models/Product.js';
 import ProductStat from './models/ProductStat.js';
 import Transaction from './models/Transaction.js';
 import OverallStat from './models/OverallStat.js';
+import AffiliateStat from './models/AffiliateStat.js';
 import { dataUser, 
     dataProduct, 
     dataProductStat, 
     dataTransaction,
     dataOverallStat, //2021 is only put to make it comprehensive, modify
+    dataAffiliateStat,
 } from "./data/index.js";
 
 
@@ -54,6 +56,7 @@ mongoose.connect(process.env.MONGO_URL, {
         app.listen(PORT, () => console.log(`Server is running at http://localhost:${PORT}`));
 
         /* ONLY ADD DATA ONE TIME */
+        //AffiliateStat.insertMany(dataAffiliateStat);
         //User.insertMany(dataUser);
         //Product.insertMany(dataProduct);
         //ProductStat.insertMany(dataProductStat);
