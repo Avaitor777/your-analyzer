@@ -7,7 +7,7 @@
 
 # website
    - Note that sufficiennt time will be taking on opening the web domain as per "render.com" restrictions and rules. It works but takes time on first approach.Refer https://dashboard.render.com/
-   - https://youranalyzer.onrender.com/dashboard 
+   - https://youranalyzer.onrender.com/dashboard
    
 # Briefing of Project:
    ------------------------------------------------------------
