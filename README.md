@@ -1,6 +1,10 @@
 # your-analyzer
  making data analysis very pro-creative and visual with common MERN software standard. 
 
+# website
+   - Note that sufficiennt time will be taking on opening the web domain as per "render.com" restrictions and rules. It works but takes time on first approach. 
+   
+
  Briefing of Project:
    ------------------------------------------------------------
    This Project is the least complex but, complex enough and more focused on the backend development and efficient data fetching for analysis purpose.
@@ -19,28 +23,28 @@
 
    -------------------------------------------------------------
 
-Project Working:
+ Project Working:
 
-There are 2 major folders
-    1: client
-    2: server
- each should be run seperatly on your vs-terminal or Terminal.
- for client:-
- 1. install node_module and dependencies via npm commands
- 2. simply run "npm audit fix"
- 3. run "npm run start" as specfied in package.json
- 4. if any doubts on the scripts, refer the package.json of client
+   There are 2 major folders
+      1: client
+      2: server
+   each should be run seperatly on your vs-terminal or Terminal.
+   for client:-
+   1. install node_module and dependencies via npm commands
+   2. simply run "npm audit fix"
+   3. run "npm run start" as specfied in package.json
+   4. if any doubts on the scripts, refer the package.json of client
 
- for server:-
- NOTE: nodemon is used.
- 1. install node_modules and dependencies via npm
- 2. simply run "npm audit fix"
- 3. run "npm run dev" as specfied in package.json
- 4. if any doubts as such, refer package.json of server
+   for server:-
+   NOTE: nodemon is used.
+   1. install node_modules and dependencies via npm
+   2. simply run "npm audit fix"
+   3. run "npm run dev" as specfied in package.json
+   4. if any doubts as such, refer package.json of server
 
- make sure to "cd" to the folders before start.
+   make sure to "cd" to the folders before start.
 
-Files and website to visit for code extraction:
+ Files and website to visit for code extraction:
 
    - Certain particular codes have been fully      imported or used from sources/packages thats MIT licensed. Do REFER them to make design or structural changes to the component.
 
@@ -51,7 +55,7 @@ Files and website to visit for code extraction:
       5. https://nivo.rocks/pie/
       6. https://reactdatepicker.com/#example-date-range
 
-error fox required:
+ error fox required:
    from @mui/x-data-grid:
       - some packages are unable or not recognized by the react compiler.
       - try updating npm or try for a fix into the packages
@@ -61,3 +65,4 @@ error fox required:
       - I have tried replacing them but on replacement, the parameters also changes. research required.
       - component active at http://localhost:3000/admin
       - related tag calls and components are disabled for the time being.
+
