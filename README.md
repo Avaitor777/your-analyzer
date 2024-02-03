@@ -61,7 +61,7 @@
       5. https://nivo.rocks/pie/
       6. https://reactdatepicker.com/#example-date-range
 
-# error fox required:
+# error fix required:
    from @mui/x-data-grid:
       - some packages are unable or not recognized by the react compiler.
       - try updating npm or try for a fix into the packages
