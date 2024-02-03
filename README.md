@@ -1,6 +1,10 @@
 # your-analyzer
  making data analysis very pro-creative and visual with common MERN software standard. 
 
+# Tech-Stack
+  FrontEnd: Material UI, Material UI Data Grid, Nivo Charts, Redux Toolkit and Redux Toolkit Query.
+  BackEnd: Node JS, Express Js, Mongoose, and MongoDB.
+
 # website
    - Note that sufficiennt time will be taking on opening the web domain as per "render.com" restrictions and rules. It works but takes time on first approach.Refer https://dashboard.render.com/
    - https://youranalyzer.onrender.com/dashboard 
